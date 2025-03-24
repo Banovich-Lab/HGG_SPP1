@@ -8,8 +8,6 @@
 # Loading libraries
 #==============================================================================#
 
-.libPaths("/home/hnatri/R/library")
-
 library(Seurat)
 library(ggplot2)
 library(data.table)
@@ -278,70 +276,3 @@ names(tumor_list)[44] <- "UPN109_posttreatment"
 saveRDS(tumor_list, "/scratch/hnatri/CART/tumor_list_all_samples_08242023.rds")
 
 # Running SoupX with soupx_for_hashed.R
-
-###
-# Old integration
-
-tumor_list_merge <- merge(tumor_list[[1]], y = tumor_list[2:length(tumor_list)])
-upn_batch <- distinct(tumor_list_merge@meta.data[,c("UPN", "Batch")])
-
-# Set nfeatures to 1000 to avoid error at IntegrateData
-features <- SelectIntegrationFeatures(object.list = tumor_list,
-                                      nfeatures = 1000)
-
-# Running PCA for rPCA integration
-for (i in 1:length(tumor_list)) {
-  message(i)
-  tumor_list[[i]] <- RunPCA(tumor_list[[i]],
-                            npcs = 30, # changing npcs to avoid an error
-                            features = features,
-                            approx = F,
-                            verbose = F)
-}
-
-tumor_list <- PrepSCTIntegration(object.list = tumor_list,
-                                 anchor.features = features,
-                                 verbose = F)
-
-# Identify anchors and integrate the datasets based on RNA
-# Using k=20 neighbors to find anchors (default = 5)?
-# Using rPCA to avoid "problem too large" error with CCA
-anchors <- FindIntegrationAnchors(object.list = tumor_list,
-                                  normalization.method = "SCT", 
-                                  anchor.features = features,
-                                  reference = seq(1, length(tumor_list), by=3), # using reference batches to avoid an error
-                                  k.anchor = 20,
-                                  dims = 1:30,
-                                  reduction = "rpca")
-# Default value for k.weight causes an error here (not enough cells for some 
-# samples?)
-tumor.integrated <- IntegrateData(anchorset = anchors,
-                                  normalization.method = "SCT", 
-                                  new.assay.name = "integrated_sct",
-                                  k.weight = 30,
-                                  verbose = T)
-unique(tumor.integrated$Batch)
-length(unique(tumor.integrated$UPN))
-# No need to run ScaleData if you've used SCT integration
-tumor.integrated = RunPCA(tumor.integrated,
-                          reduction.name = "integrated_sct_pca",
-                          verbose = F)
-pcs <- get_pcs(tumor.integrated, reduction_name = "integrated_sct_pca")
-message(pcs)
-tumor.integrated = RunUMAP(tumor.integrated,
-                           reduction = "integrated_sct_pca",
-                           reduction.name = "integrated_sct_umap",
-                           dims = 1:min(pcs),
-                           return.model = TRUE)
-tumor.integrated = FindNeighbors(tumor.integrated,
-                                 reduction = "integrated_sct_pca",
-                                 dims = 1:min(pcs),
-                                 graph.name = c("integrated_sct_nn",
-                                                "integrated_sct_snn"))
-# resolution 0.2
-tumor.integrated = FindClusters(tumor.integrated,
-                                resolution = c(0.1,0.2,0.3,0.5,0.8,1),
-                                graph.name = "integrated_sct_nn")
-
-saveRDS(tumor.integrated,  "/labs/banovich/BCTCSF/Heini/all_batches_tumor_integrated_rPCA_SCT_aug2023_nn_UPN109pre.rds")
-
