@@ -40,26 +40,26 @@ Raw and processed GBM/HGG scRNA-seq data are deposited at the Gene Expression Om
 ### Analysis and figures
 
 * Figure 1 and Extended Figures 1-2
-..* Fig1_13384_GBM_scRNAseq.R
-..* Fig1_GBMHGG_CellChat.R
+⋅⋅* Fig1_13384_GBM_scRNAseq.R
+⋅⋅* Fig1_GBMHGG_CellChat.R
 * Figure 2
-..* Fig2_GBMHGG_SPP1_survival_wholetumor.R
-..* Fig2_GBMHGG_SPP1_HR.R
-..* Fig2_GBMHGG_SPP1_survival.R
-..* Fig2_GBMHGG_SPP1_survival_plot.R
-..* Fig2_GBMHGG_GSEA.R
-..* Fig2_GBMHGG_DEGs.R
+⋅⋅* Fig2_GBMHGG_SPP1_survival_wholetumor.R
+⋅⋅* Fig2_GBMHGG_SPP1_HR.R
+⋅⋅* Fig2_GBMHGG_SPP1_survival.R
+⋅⋅* Fig2_GBMHGG_SPP1_survival_plot.R
+⋅⋅* Fig2_GBMHGG_GSEA.R
+⋅⋅* Fig2_GBMHGG_DEGs.R
 * Figure 3
-..* Fig3_GBMHGG_JAK1KO_integrated.R
-..* Fig3_JAK1KO_WT_CellChat.R
+⋅⋅* Fig3_GBMHGG_JAK1KO_integrated.R
+⋅⋅* Fig3_JAK1KO_WT_CellChat.R
 * Figure 4
-..* Fig4_13384_GBM_JAK1KO_WT_compare.R
+⋅⋅* Fig4_13384_GBM_JAK1KO_WT_compare.R
 * Figure 5
-..* Fig5_bulkRNAseq.R
-..* Fig5_bulkRNAseq_ctdeconv.R
+⋅⋅* Fig5_bulkRNAseq.R
+⋅⋅* Fig5_bulkRNAseq_ctdeconv.R
 * Extended Figure 1, panel c
-..* ExtendedFig_GBM_inferCNV.R
-..* ExtendedFig_GBM_inferCNV_result.R
+⋅⋅* ExtendedFig_GBM_inferCNV.R
+⋅⋅* ExtendedFig_GBM_inferCNV_result.R
 * Quality metrics
-..* ExtendedFig_GBMHGG_QC.R
+⋅⋅* ExtendedFig_GBMHGG_QC.R
 
