@@ -15,18 +15,22 @@ Sharareh Gholamin<sup>1,2,3</sup>&ast;<sup>†</sup>, Heini M Natri<sup>4</sup>&
 9. Division of Neurosurgery, City of Hope, Duarte, CA 91010, USA 
 
  
-&ast; indicates shared first authorship. 
-&ast;&ast; indicates shared senior authorship. 
-<sup>†</sup> indicates shared correspondence. 
+&ast; indicates shared first authorship.
+
+&ast;&ast; indicates shared senior authorship.
+
+<sup>†</sup> indicates shared correspondence.
+
 
 Manuscript correspondence to: cbrown@coh.org, sgholamin@coh.org
+
 Code/Github repository contact: hnatri@tgen.org
 
 Preprint URL pending.
 
 ## Single cell RNA-sequencing data processing and analysis
 
-Raw and processed GBM/HGG scRNA-seq data are deposited at the Gene Expression Omnibus (GEO) under accession number GSE290291 and mouse data under accession GSE289327. Code for the processing and initial analysis of the mouse data can be found in a separate repository at [https://github.com/zhaoyuqi616/SPP1-Targeted_CAR_T_Therapy](https://github.com/zhaoyuqi616/SPP1-Targeted_CAR_T_Therapy)).
+Raw and processed GBM/HGG scRNA-seq data are deposited at the Gene Expression Omnibus (GEO) under accession number GSE290291 and mouse data under accession GSE289327. Code for the processing and initial analysis of the mouse data can be found in a separate repository at [https://github.com/zhaoyuqi616/SPP1-Targeted_CAR_T_Therapy](https://github.com/zhaoyuqi616/SPP1-Targeted_CAR_T_Therapy).
 
 ### Pre-processing and integration
 
