@@ -2,7 +2,7 @@ This repository contains the custom code to reproduce the results presented in:
 
 ## Overcoming myeloid-driven resistance to CAR T therapy by targeting SPP1 
 
-Sharareh Gholamin<sup>1,2,3</sup>*<sup>†</sup>, Heini M Natri<sup>4</sup>*, Yuqi Zhao<sup>5</sup>, Shengchao Xu<sup>1</sup>, Maryam Aftabizadeh<sup>1</sup></sup>, Begonya Comin-Anduix<sup>6</sup>, Supraja Saravanakumar<sup>1</sup>, Christian Masia<sup>1</sup>, Robyn A. Wong<sup>1</sup>, Lance Peter<sup>4</sup>, Mei-i Chung<sup>4</sup>, Evan D Mee<sup>4</sup>, Brenda Aguilar<sup>1</sup>, Renate Starr<sup>1</sup>, Davis Y. Torrejon<sup>7</sup>, Darya Alizadeh<sup>1</sup>, Xiwei Wu<sup>5</sup>, Anusha Kalbasi<sup>8</sup>, Antoni Ribas<sup>7</sup>, Stephen Forman<sup>1</sup>, Behnam Badie<sup>9</sup>, Nicholas E Banovich<sup>4</sup>**, Christine E Brown<sup>1</sup>**<sup>†</sup>
+Sharareh Gholamin<sup>1,2,3</sup>&ast;<sup>†</sup>, Heini M Natri<sup>4</sup>&ast;, Yuqi Zhao<sup>5</sup>, Shengchao Xu<sup>1</sup>, Maryam Aftabizadeh<sup>1</sup></sup>, Begonya Comin-Anduix<sup>6</sup>, Supraja Saravanakumar<sup>1</sup>, Christian Masia<sup>1</sup>, Robyn A. Wong<sup>1</sup>, Lance Peter<sup>4</sup>, Mei-i Chung<sup>4</sup>, Evan D Mee<sup>4</sup>, Brenda Aguilar<sup>1</sup>, Renate Starr<sup>1</sup>, Davis Y. Torrejon<sup>7</sup>, Darya Alizadeh<sup>1</sup>, Xiwei Wu<sup>5</sup>, Anusha Kalbasi<sup>8</sup>, Antoni Ribas<sup>7</sup>, Stephen Forman<sup>1</sup>, Behnam Badie<sup>9</sup>, Nicholas E Banovich<sup>4</sup>&ast;&ast;, Christine E Brown<sup>1</sup>&ast;&ast;<sup>†</sup>
 
 1. City of Hope Beckman Research Institute and Medical Center, Duarte, CA 91010, USA 
 2. California Institute of Technology, Division of Biology and Biological Engineering, Pasadena, CA 91125, USA 
