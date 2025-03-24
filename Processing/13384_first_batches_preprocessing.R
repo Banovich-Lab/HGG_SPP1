@@ -298,8 +298,6 @@ table(batch.list[[2]]$hash.ID)
 # Numbers of singlets and doublets
 batch.list[[1]] = batch1
 
-14440/(14440+3452+3953)
-
 saveRDS(batch.list, "/scratch/hnatri/CART/batch.list.rds")
 
 bt_merge <- merge(x = batch.list[[1]], y = batch.list[2:length(batch.list)])
